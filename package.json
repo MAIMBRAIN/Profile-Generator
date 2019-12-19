@@ -1,0 +1,21 @@
+{
+  "name": "profile-generator",
+  "version": "1.0.0",
+  "description": "Generates a PDF with statistics from a GitHub users' profile",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "GitHub",
+    "Profile",
+    "PDF",
+    "generate",
+    "PDF"
+  ],
+  "author": "Avery Stahl",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^7.0.1"
+  }
+}
