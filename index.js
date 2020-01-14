@@ -1,7 +1,9 @@
 // Get the nodes
-var fs = require("fs");
-var inquirer = require("inquirer");
-var page = require("./generateHTML")
+const fs = require("fs");
+const inquirer = require("inquirer");
+const axios = require("axios")
+const page = require("./generateHTML");
+
 
 inquirer.prompt([
     {
@@ -15,7 +17,13 @@ inquirer.prompt([
         choices: ["Red", "Blue", "Green", "Pink"],
         name: "color"
     }
-]).then(function(data)
+]).then(function({username})
 {
-    fs.writeFile("profile.pdf", page.generateHTML);
+    const queryURL = `https://api.github.com/users/${username}`
+    
+    axios.get(queryURL).then(res => 
+        {
+            fs.writeFile("profile.pdf", page.generateHTML);
+        })
+    
 })

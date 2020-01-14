@@ -16,6 +16,7 @@
   "author": "Avery Stahl",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
     "inquirer": "^7.0.1"
   }
 }
